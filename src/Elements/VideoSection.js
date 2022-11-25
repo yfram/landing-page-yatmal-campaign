@@ -31,12 +31,15 @@ const VideoSection = () => {
         />
       </div>
       <div>
-        <Slider>
+        <Slider onSlideChange={event => {
+          document.getElementById("video-slide").pause();
+        }}>
           {slides.map((slide, index) => (
             <div key={index}>
               <video
                 v-else
                 controls
+                id="video-slide"
                 src={slide.videoSource}
                 poster={slide.posterSource}
                 style={{
