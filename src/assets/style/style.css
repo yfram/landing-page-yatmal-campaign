@@ -1,0 +1,64 @@
+.app-bar {
+    background-color: #0c2359;
+    color: #ffffff;
+    position: static;
+    width: 100%;
+    height: 120px;
+    overflow: visible;
+}
+
+.title {
+    font-family: 'Assistant', sans-serif;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 1px;
+}
+
+.big-title {
+    font-family: 'Assistant', sans-serif;
+    margin-top: 1px;
+    font-size: 3em;
+    text-align: center;
+}
+
+.hebrew-text {
+    direction: rtl;
+}
+
+.separator {
+    background-color: #0c2359;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+.big-separator {
+    background-color: #0c2359;
+    height: 150px;
+    width: 100%;
+    text-align: center;
+}
+
+.separator-text {
+    font-family: 'Rubik', sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0px;
+    padding-top: 30px;
+    font-weight: bold;
+}
+
+.float {
+    position: fixed;
+    width: 200px;
+    height: 90px;
+    bottom: 40px;
+    left: 40px;
+    background-color: #0c2359;
+    color: #d58f28;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #d58f28;
+}
