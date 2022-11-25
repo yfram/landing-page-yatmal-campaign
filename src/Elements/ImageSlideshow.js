@@ -6,6 +6,8 @@ const slides = [
     { imageSource: require('./../assets/images/2.jpg') },
     { imageSource: require('./../assets/images/4.jpg') },
     { imageSource: require('./../assets/images/5.jpg') },
+    { imageSource: require('./../assets/images/6.jpg') },
+    { imageSource: require('./../assets/images/7.jpg') },
 ];
 
 const ImageSlideshow = () => {
