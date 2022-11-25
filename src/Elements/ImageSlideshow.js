@@ -24,10 +24,9 @@ const ImageSlideshow = () => {
             <Slider autoplay={3000}>
                 {slides.map((slide, index) => <div key={index}>
                     <img style={{
-                        height: "200%",
-                        marginLeft: "auto",
-                        marginRight: "auto",
-                        display: "block",
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "contain",
                     }} src={slide.imageSource} />
                 </div>)}
             </Slider>
