@@ -93,6 +93,19 @@
     box-shadow: 2px 2px 3px #d58f28;
 }
 
+.mobile-float {
+    position: fixed;
+    width: 30%;
+    height: 15%;
+    bottom: 40px;
+    left: 40px;
+    background-color: #0c2359;
+    color: #d58f28;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #d58f28;
+}
+
 video::-webkit-media-controls-panel {
     background-image: linear-gradient(transparent, transparent) !important;
 }

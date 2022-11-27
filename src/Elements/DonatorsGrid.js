@@ -69,7 +69,6 @@ const DonatorsGrid = () => {
                             color: "#000",
                             fontSize: "1.5em",
                             fontFamily: "Assistant",
-
                           }}
                           className="hebrew-text"
                         >

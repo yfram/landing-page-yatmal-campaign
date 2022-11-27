@@ -3,11 +3,10 @@ import { Async } from "react-async";
 import AppBar from "../Elements/AppBar";
 import DonatorsGrid from "../Elements/DonatorsGrid";
 import ImageSlideshow from "../Elements/ImageSlideshow";
-import getPayments from "../Helpers/getPayments";
 import getTotalAmountDonated from "../Helpers/getTotalAmountDonated";
 import "./../assets/style/style.css";
 
-const Layout = () => {
+const DesktopLayout = () => {
   return (
     <div className="layout">
       <AppBar />
@@ -115,4 +114,4 @@ const Layout = () => {
     </div >
   );
 };
-export default Layout;
+export default DesktopLayout;
