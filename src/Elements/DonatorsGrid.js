@@ -1,19 +1,20 @@
-import { Grid, Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import { Async } from "react-async";
 import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import getPayments from "../Helpers/getPayments";
 
+
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: "#f1c232",
+  backgroundColor: "#e6e7f0",
   padding: "5px",
   margin: "2.5px",
   textAlign: "center",
   borderRadius: "20px",
 }));
 
-const DonatorsGrid = ({ donators }) => {
+const DonatorsGrid = () => {
   return (
     <Container>
       <Async promiseFn={getPayments}>
@@ -22,18 +23,20 @@ const DonatorsGrid = ({ donators }) => {
           if (error) return `Something went wrong: ${error.message}`;
           if (data)
             return (
-              <Grid
-                container
-                justifyContent="flex-end"
-                spacing={{ xs: 4, md: 6 }}
-              >
-                {data.map((payment, index) => (
-                  <Grid item xs={2} sm={4} md={3} key={index}>
+              <div>
+                <h1 style={{ textAlign: "right", direction: "rtl" }}>{data.length}  תורמים</h1>
+                <Box sx={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(2, 1fr)',
+                  gap: 2,
+                }}>
+
+                  {data.map((payment) => (
                     <Item>
                       <div
                         style={{
                           textAlign: "right",
-                          backgroundColor: "#f1c232",
+                          backgroundColor: "#e6e7f0",
                         }}
                       >
                         <span
@@ -47,36 +50,38 @@ const DonatorsGrid = ({ donators }) => {
                         >
                           {payment.name}
                         </span>
-                        <hr style={{ width: "100%" }}></hr>
                         <span
                           style={{
                             textAlign: "right",
                             color: "#626262",
                             fontSize: "2em",
                             fontFamily: "Assistant",
+                            float: "left"
                           }}
                           className="hebrew-text"
                         >
                           ₪{payment.amount_donated}
                         </span>
-                        <br />
+                        <hr style={{ width: "100%" }}></hr>
                         <br />
                         <span
                           style={{
-                            textAlign: "right",
                             color: "#000",
                             fontSize: "1.5em",
                             fontFamily: "Assistant",
+
                           }}
                           className="hebrew-text"
                         >
                           {payment.comments}
                         </span>
+                        <br />
+                        <br />
                       </div>
                     </Item>
-                  </Grid>
-                ))}
-              </Grid>
+                  ))}
+                </Box>
+              </div>
             );
           return null;
         }}
