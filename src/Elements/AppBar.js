@@ -2,14 +2,10 @@ import React from "react";
 import { Async } from "react-async";
 import getTotalAmountDonated from "../Helpers/getTotalAmountDonated";
 
-const getAmountDonated = async () => {
-  let ret = await getTotalAmountDonated();
-  return ret;
-};
 
 const AppBar = () => {
   return (
-    <Async promiseFn={getAmountDonated}>
+    <Async promiseFn={getTotalAmountDonated}>
       {({ data, error, isLoading }) => {
         if (isLoading) return "Loading...";
         if (error) return `Something went wrong: ${error.message}`;
