@@ -31,8 +31,8 @@ const DonatorsGrid = () => {
                   gap: 2,
                 }}>
 
-                  {data.map((payment) => (
-                    <Item>
+                  {data.map((payment, index) => (
+                    <Item key={index}>
                       <div
                         style={{
                           textAlign: "right",

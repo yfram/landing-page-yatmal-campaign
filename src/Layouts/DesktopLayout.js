@@ -13,7 +13,7 @@ const DesktopLayout = () => {
       <div style={{ display: "flex", backgroundColor: "white" }}>
         <ImageSlideshow style={{ width: "50%", float: "left" }} />
         <video
-          v-else
+          v-else="!isMobile"
           controls
           id="video-slide"
           src={require("../assets/videos/2.mp4")}
@@ -36,7 +36,7 @@ const DesktopLayout = () => {
         <img src={require('../assets/images/logo.png')} style={{ width: "45%", objectFit: "contain", float: "left", marginLeft: "2.5%" }} />
         <div style={{ width: "55%", marginTop: "2.5%" }}>
           <video
-            v-else
+            v-else="!isMobile"
             controls
             id="video-slide"
             src={require("../assets/videos/1.mp4")}
