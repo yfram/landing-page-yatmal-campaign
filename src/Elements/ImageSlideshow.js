@@ -1,5 +1,6 @@
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
+import '../assets/style/style.css';
 
 const slides = [
     { imageSource: require('./../assets/images/1.jpg') },
@@ -8,29 +9,19 @@ const slides = [
     { imageSource: require('./../assets/images/5.jpg') },
     { imageSource: require('./../assets/images/6.jpg') },
     { imageSource: require('./../assets/images/7.jpg') },
-    { imageSource: require('./../assets/images/8.jpg') },
 ];
 
-const ImageSlideshow = () => {
-    return <div style={{
-        width: "100%",
-        backgroundColor: "#f1c232",
-    }}>
-        <div style={{
-            width: "80%",
-            display: "block",
-            margin: "auto",
-        }}>
-            <Slider autoplay={3000}>
-                {slides.map((slide, index) => <div key={index}>
-                    <img style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "contain",
-                    }} src={slide.imageSource} />
-                </div>)}
-            </Slider>
-        </div>
+const ImageSlideshow = ({ style }) => {
+    return <div style={style}>
+        <Slider autoplay={3000}>
+            {slides.map((slide, index) => <div key={index}>
+                <img style={{
+                    backgroundSize: 'cover',
+                    width: '100%',
+                    height: '100%',
+                }} src={slide.imageSource} />
+            </div>)}
+        </Slider>
     </div>
 }
 
