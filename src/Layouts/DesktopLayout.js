@@ -25,7 +25,7 @@ const DesktopLayout = () => {
       </button>
       <AppBar />
       <div style={{ display: "flex", backgroundColor: "white" }}>
-        <ImageSlideshow style={{ width: "50%" }} />
+        <ImageSlideshow style={{ width: "50%"}} />
         <video
           v-else="!isMobile"
           controls

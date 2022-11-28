@@ -24,7 +24,11 @@ const ImageSlideshow = ({ style }) => {
 function Item(props) {
     return (
         <Paper>
-            <img src={props.item.imageSource} style={{ width: "100%", objectFit: "contain" }} />
+            <img src={props.item.imageSource} style={{
+                width: "100%",
+                objectFit: "contain",
+                height: "400px"
+            }} />
         </Paper>
     )
 }
