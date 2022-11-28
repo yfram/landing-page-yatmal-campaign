@@ -9,9 +9,22 @@ import "./../assets/style/style.css";
 const DesktopLayout = () => {
   return (
     <div className="layout">
+      <button
+        style={{
+          cursor: "pointer",
+          fontWeight: "bolder",
+          fontSize: "2rem",
+          fontFamily: "Assistant",
+          direction: "rtl",
+          zIndex: 100,
+        }}
+        className="float"
+      >
+        היו שותפים!
+      </button>
       <AppBar />
       <div style={{ display: "flex", backgroundColor: "white" }}>
-        <ImageSlideshow style={{ width: "50%", float: "left" }} />
+        <ImageSlideshow style={{ width: "50%" }} />
         <video
           v-else="!isMobile"
           controls
@@ -101,18 +114,6 @@ const DesktopLayout = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <button
-          style={{
-            cursor: "pointer",
-            fontWeight: "bolder",
-            fontSize: "2rem",
-            fontFamily: "Assistant",
-            direction: "rtl",
-          }}
-          className="float"
-        >
-          היו שותפים!
-        </button>
       </a>
     </div >
   );

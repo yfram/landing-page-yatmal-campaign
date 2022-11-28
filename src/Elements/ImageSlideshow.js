@@ -1,8 +1,8 @@
-import Slider from 'react-animated-slider';
-import 'react-animated-slider/build/horizontal.css';
-import '../assets/style/style.css';
+import React from 'react';
+import Carousel from 'react-material-ui-carousel'
+import { Paper, Button } from '@mui/material'
 
-const slides = [
+const items = [
     { imageSource: require('./../assets/images/1.jpg') },
     { imageSource: require('./../assets/images/2.jpg') },
     { imageSource: require('./../assets/images/4.jpg') },
@@ -12,14 +12,21 @@ const slides = [
 ];
 
 const ImageSlideshow = ({ style }) => {
-    return <div style={style}>
-        <Slider autoplay={3000}>
-            {slides.map((slide, index) => <div key={index}>
-                <img style={{ width: "100%", height: "100%" }} src={slide.imageSource} />
-            </div>)}
-        </Slider>
-    </div>
+    return (
+        <Carousel sx={style} indicators={false} animation='slide'>
+            {
+                items.map((item, i) => <Item key={i} item={item} />)
+            }
+        </Carousel>
+    )
+}
+
+function Item(props) {
+    return (
+        <Paper>
+            <img src={props.item.imageSource} style={{ width: "100%", objectFit: "contain" }} />
+        </Paper>
+    )
 }
 
 export default ImageSlideshow;
-
