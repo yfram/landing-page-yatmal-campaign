@@ -27,7 +27,6 @@ function Item(props) {
             <img src={props.item.imageSource} style={{
                 width: "100%",
                 objectFit: "contain",
-                height: "400px"
             }} />
         </Paper>
     )
