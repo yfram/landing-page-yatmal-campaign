@@ -60,10 +60,14 @@ const DesktopLayout = () => {
                 {({ data, error, isLoading }) => {
                     if (isLoading) return "Loading...";
                     if (error) return `Something went wrong: ${error.message}`;
-                    if (data)
+                    if (data) {
+
+                        let percentage = (data / (7000000 / 100)).toFixed(2);
+                        let mask = `linear-gradient(to top, rgba(0, 0, 0, 0.5) ${percentage}%, rgba(0, 0, 0, 1) ${percentage}%)`;
                         return (
                             <div style={{ display: "flex" }}>
                                 <img
+                                    className="loading-img"
                                     style={{
                                         width: "40%",
                                         height: "40%",
@@ -71,6 +75,8 @@ const DesktopLayout = () => {
                                         verticalAlign: "middle",
                                         border: "7px solid #0c2359",
                                         borderRadius: "7px",
+                                        WebkitMaskImage: mask,
+                                        maskImage: mask
                                     }}
                                     src={require('../assets/images/building.png')} />
                                 <h1 style={{
@@ -81,11 +87,12 @@ const DesktopLayout = () => {
                                     textAlign: "center",
                                     color: "#0c2359",
                                 }}>
-                                    {(data / (7000000 / 100)).toPrecision(1)}%
+                                    {percentage}%
                                     <br /> מיעד הקמפיין
                                 </h1>
                             </div>
                         );
+                    }
                 }}
             </Async >
             <div style={{ width: "100%", margin: "20px auto" }}>
