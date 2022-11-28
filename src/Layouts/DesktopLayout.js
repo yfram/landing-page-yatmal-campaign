@@ -1,3 +1,4 @@
+import { display } from "@mui/system";
 import React from "react";
 import { Async } from "react-async";
 import AppBar from "../Elements/AppBar";
@@ -76,30 +77,48 @@ const DesktopLayout = () => {
           if (error) return `Something went wrong: ${error.message}`;
           if (data) {
             let percentage = (data / (7000000 / 100)).toFixed(2);
-            let mask = `linear-gradient(to top, rgba(0, 0, 0, 0.5) ${percentage}%, rgba(0, 0, 0, 1) ${percentage}%)`;
+            let mask = `linear-gradient(to top, rgba(0, 0, 0, 1) ${percentage}%, rgba(0, 0, 0, 0.5) ${percentage}%)`;
             return (
-              <div style={{ display: "flex", textAlign: "center" }}>
-                <img
-                  className="loading-img"
-                  style={{
-                    width: "30%",
-                    marginLeft: "15%",
-                    marginTop: "2.5%",
-                    border: "7px solid #0c2359",
-                    borderRadius: "7px",
-                    WebkitMaskImage: mask,
-                    maskImage: mask
-                  }}
-                  src={require('../assets/images/building.png')} />
+              <div style={{ display: "flex", textAlign: "center" }}>\
+                <div style={{
+                  width: "30%",
+                  marginLeft: "15%",
+                  marginTop: "2.5%",
+                  position: "relative",
+                }}>
+                  <img
+                    className="loading-img"
+                    style={{
+                      border: "7px solid #0c2359",
+                      width: "100%",
+                      objectFit: "contain",
+                      borderRadius: "7px",
+                      WebkitMaskImage: mask,
+                      maskImage: mask
+                    }}
+                    src={require('../assets/images/building.png')} />
+                  <h1
+                    style={{
+                      position: "absolute",
+                      bottom: "30%",
+                      left: "32%",
+                      fontSize: "3.5rem",
+                      color: "black",
+                    }}
+                  >
+                    <span >{percentage}</span>%
+                  </h1>
+                </div>
                 <h1 style={{
                   direction: "rtl",
-                  marginLeft: "11%",
+                  marginLeft: "10%",
                   marginTop: "7%",
-                  fontSize: "70px",
+                  fontSize: "60px",
                   color: "#0c2359",
                 }}>
-                  {percentage}%
-                  <br /> מיעד הקמפיין
+                  יעד הקמפיין:
+                  <br />
+                  <span style={{ fontSize: "100px" }}>₪7,000,000</span>
                 </h1>
               </div>
             );
