@@ -4,11 +4,13 @@ import AppBar from "../Elements/AppBar";
 import DonatorsGrid from "../Elements/DonatorsGrid";
 import ImageSlideshow from "../Elements/ImageSlideshow";
 import getTotalAmountDonated from "../Helpers/getTotalAmountDonated";
-import "./../assets/style/style.css";
+import DonateButton from "../Components/DonateButton";
+import "./../assets/style/style.scss";
 
 const DesktopLayout = () => {
     return (
         <div className="layout">
+            <DonateButton mobileMode={true} />
             <AppBar />
             <ImageSlideshow
                 style={{ borderBottom: '60px solid #0c2359' }} />
@@ -103,9 +105,9 @@ const DesktopLayout = () => {
                                     textAlign: "center",
                                     color: "#0c2359",
                                 }}>
-                                יעד הקמפיין:
-                                <br />
-                                <span style={{ fontSize: "2rem" }}>₪7,000,000</span>                                </h1>
+                                    יעד הקמפיין:
+                                    <br />
+                                    <span style={{ fontSize: "2rem" }}>₪7,000,000</span>                                </h1>
                             </div>
                         );
                     }
@@ -114,24 +116,6 @@ const DesktopLayout = () => {
             <div style={{ width: "100%", margin: "20px auto" }}>
                 <DonatorsGrid />
             </div>
-            <a
-                href="https://meshulam.co.il/purchase?b=e097903b1fd2bd1ce0088bcba9b2a03c"
-                target="_blank"
-                rel="noreferrer"
-            >
-                <button
-                    style={{
-                        cursor: "pointer",
-                        fontWeight: "bolder",
-                        fontSize: "2rem",
-                        fontFamily: "Assistant",
-                        direction: "rtl",
-                    }}
-                    className="mobile-float"
-                >
-                    היו שותפים!
-                </button>
-            </a>
         </div >
     );
 };

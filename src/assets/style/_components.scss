@@ -1,0 +1,47 @@
+/*
+    * Components
+    * ==========================================================================
+    copyright: 2022 by @yfram
+    license: MIT
+    repository: https://github.com/yfram/landing-page-yatmal-campaign
+*/
+
+.app-bar {
+    background-color: $primary-color;
+    color: white;
+    position: static;
+    width: 100%;
+    display: flex;
+    &>div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+.title {
+    font-family: $primary-font;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0;
+    &.big {
+        font-size: 2.5rem;
+    }
+}
+
+.hebrew-text {
+    direction: rtl;
+}
+
+.floating-button {
+    @include button;
+    @include floating-element;
+    &.mobile {
+        width: "30%"
+    }
+    &.desktop {
+        width: "20%"
+    }
+}

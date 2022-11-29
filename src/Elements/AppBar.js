@@ -16,13 +16,14 @@ const AppBar = () => {
                 style={{
                   height: "100px",
                   float: "left",
+                  marginLeft: "2%"
                 }}
                 src={require("./../assets/images/logo-main.png")}
                 alt="TOM logo"
               />
               <div style={{display: "flex", marginRight: "12.5%"}}>
                 <h1 className="title hebrew-text">הושג עד כה:</h1>
-                <h1 className="big-title hebrew-text">
+                <h1 className="title big hebrew-text">
                   {data.toLocaleString()} ₪
                 </h1>
               </div>

@@ -1,34 +1,16 @@
-import { display } from "@mui/system";
 import React from "react";
 import { Async } from "react-async";
 import AppBar from "../Elements/AppBar";
 import DonatorsGrid from "../Elements/DonatorsGrid";
 import ImageSlideshow from "../Elements/ImageSlideshow";
 import getTotalAmountDonated from "../Helpers/getTotalAmountDonated";
-import "./../assets/style/style.css";
+import DonateButton from '../Components/DonateButton';
+import "./../assets/style/style.scss";
 
 const DesktopLayout = () => {
   return (
     <div className="layout">
-      <a
-        href="https://meshulam.co.il/purchase?b=e097903b1fd2bd1ce0088bcba9b2a03c"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <button
-          style={{
-            cursor: "pointer",
-            fontWeight: "bolder",
-            fontSize: "2rem",
-            fontFamily: "Assistant",
-            direction: "rtl",
-            zIndex: 100,
-          }}
-          className="float"
-        >
-          היו שותפים!
-        </button>
-      </a>
+      <DonateButton/>
       <AppBar />
       <div style={{ display: "flex", backgroundColor: "white" }}>
         <ImageSlideshow style={{ width: "50%" }} />
