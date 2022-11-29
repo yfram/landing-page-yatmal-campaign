@@ -12,30 +12,19 @@ const AppBar = () => {
         if (data)
           return (
             <div className="app-bar">
-              <div>
-                <img
-                  style={{
-                    height: "100px",
-                  }}
-                  src={require("./../assets/images/logo-main.png")}
-                  alt="TOM logo"
-                />
-              </div>
-              <div>
+              <img
+                style={{
+                  height: "100px",
+                  float: "left",
+                }}
+                src={require("./../assets/images/logo-main.png")}
+                alt="TOM logo"
+              />
+              <div style={{display: "flex", marginRight: "12.5%"}}>
                 <h1 className="title hebrew-text">הושג עד כה:</h1>
                 <h1 className="big-title hebrew-text">
                   {data.toLocaleString()} ₪
                 </h1>
-              </div>
-              <div>
-                <img
-                  style={{
-                    height: "100px",
-                    margin: "10px 0",
-                  }}
-                  src={require("./../assets/images/logo-givechack.png")}
-                  alt="Givechack logo"
-                />
               </div>
             </div>
           );
