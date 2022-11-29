@@ -21,6 +21,16 @@
     }
 }
 
+.half {
+    width: 50%;
+    &-left {
+        float: left;
+    }
+    &-right {
+        float: right;
+    }
+}
+
 video::-webkit-media-controls-panel {
     background-image: linear-gradient(transparent, transparent) !important;
 }

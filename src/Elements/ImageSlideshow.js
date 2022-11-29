@@ -10,9 +10,9 @@ const items = [
     { imageSource: require('./../assets/images/6.jpg') },
 ];
 
-const ImageSlideshow = ({ style }) => {
+const ImageSlideshow = ({ className }) => {
     return (
-        <Carousel sx={style} indicators={false} animation='slide'>
+        <Carousel className={className} indicators={false} animation='slide'>
             {
                 items.map((item, i) => <Item key={i} item={item} />)
             }

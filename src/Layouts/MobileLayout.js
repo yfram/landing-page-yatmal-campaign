@@ -30,8 +30,7 @@ const DesktopLayout = () => {
                 לאחר מעל שני עשורים להקמתה של הישיבה, הולכים לקראת מבנה קבע לתורה ומדע.
                 <br /> בנין הישיבה ולצידו מתחם הפנימייה בצמוד למרכז האקדמי לב
             </div>
-            <div style={{
-                display: "flex",
+            <div className="flex-box" style={{
                 backgroundColor: "black",
             }}>
                 <img src={require('../assets/images/logo.png')} style={{ width: "100%", objectFit: "contain" }} />
@@ -75,7 +74,6 @@ const DesktopLayout = () => {
                                     position: "relative"
                                 }}>
                                     <img
-                                        className="loading-img"
                                         style={{
                                             border: "7px solid #0c2359",
                                             width: "100%",

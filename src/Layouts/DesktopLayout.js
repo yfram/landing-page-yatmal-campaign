@@ -10,29 +10,22 @@ import "./../assets/style/style.scss";
 const DesktopLayout = () => {
   return (
     <div className="layout">
-      <DonateButton/>
+      <DonateButton />
       <AppBar />
-      <div style={{ display: "flex", backgroundColor: "white" }}>
-        <ImageSlideshow style={{ width: "50%" }} />
-        <video
-          v-else="!isMobile"
+      <div className="flex-box">
+        <ImageSlideshow className="half" />
+        <video v-else="!isMobile"
           controls
           id="video-slide"
           src={require("../assets/videos/2.mp4")}
           poster={require("../assets/images/thumbnail2.jpg")}
-          style={{
-            width: "50%",
-            margin: "auto",
-            objectFit: "cover",
-          }}
-        />
+          className="half" />
       </div>
       <div className="separator hebrew-text separator-text">
         לאחר מעל שני עשורים להקמתה של הישיבה, הולכים לקראת מבנה קבע לתורה ומדע.
         <br /> בנין הישיבה ולצידו מתחם הפנימייה בצמוד למרכז האקדמי לב
       </div>
-      <div style={{
-        display: "flex",
+      <div className="flex-box" style={{
         backgroundColor: "black",
       }}>
         <img src={require('../assets/images/logo.png')} style={{ width: "45%", objectFit: "contain", float: "left", marginLeft: "2.5%" }} />
@@ -76,7 +69,6 @@ const DesktopLayout = () => {
                   justifyContent: "center"
                 }}>
                   <img
-                    className="loading-img"
                     style={{
                       border: "7px solid #0c2359",
                       width: "400px",
