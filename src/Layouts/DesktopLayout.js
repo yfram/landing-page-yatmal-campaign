@@ -10,22 +10,28 @@ import "./../assets/style/style.css";
 const DesktopLayout = () => {
   return (
     <div className="layout">
-      <button
-        style={{
-          cursor: "pointer",
-          fontWeight: "bolder",
-          fontSize: "2rem",
-          fontFamily: "Assistant",
-          direction: "rtl",
-          zIndex: 100,
-        }}
-        className="float"
+      <a
+        href="https://meshulam.co.il/purchase?b=e097903b1fd2bd1ce0088bcba9b2a03c"
+        target="_blank"
+        rel="noreferrer"
       >
-        היו שותפים!
-      </button>
+        <button
+          style={{
+            cursor: "pointer",
+            fontWeight: "bolder",
+            fontSize: "2rem",
+            fontFamily: "Assistant",
+            direction: "rtl",
+            zIndex: 100,
+          }}
+          className="float"
+        >
+          היו שותפים!
+        </button>
+      </a>
       <AppBar />
       <div style={{ display: "flex", backgroundColor: "white" }}>
-        <ImageSlideshow style={{ width: "50%"}} />
+        <ImageSlideshow style={{ width: "50%" }} />
         <video
           v-else="!isMobile"
           controls
@@ -85,12 +91,13 @@ const DesktopLayout = () => {
                   marginLeft: "15%",
                   marginTop: "2.5%",
                   position: "relative",
+                  justifyContent: "center"
                 }}>
                   <img
                     className="loading-img"
                     style={{
                       border: "7px solid #0c2359",
-                      width: "100%",
+                      width: "400px",
                       objectFit: "contain",
                       borderRadius: "7px",
                       WebkitMaskImage: mask,
@@ -100,9 +107,9 @@ const DesktopLayout = () => {
                   <h1
                     style={{
                       position: "absolute",
-                      bottom: "30%",
-                      left: "32%",
                       fontSize: "3.5rem",
+                      top: "100px",
+                      left: "130px",
                       color: "black",
                     }}
                   >
@@ -128,12 +135,6 @@ const DesktopLayout = () => {
       <div style={{ width: "100%", margin: "20px auto" }}>
         <DonatorsGrid />
       </div>
-      <a
-        href="https://meshulam.co.il/purchase?b=e097903b1fd2bd1ce0088bcba9b2a03c"
-        target="_blank"
-        rel="noreferrer"
-      >
-      </a>
     </div >
   );
 };
