@@ -31,54 +31,56 @@ const DonatorsGrid = () => {
                   gap: 2,
                 }}>
 
-                  {data.map((payment, index) => (
-                    <Item key={index}>
-                      <div
-                        style={{
-                          textAlign: "right",
-                          backgroundColor: "#e6e7f0",
-                        }}
-                      >
-                        <span
+                  {data
+                    .sort((a, b) => b.amount_donated - a.amount_donated)
+                    .map((payment, index) => (
+                      <Item key={index}>
+                        <div
                           style={{
                             textAlign: "right",
-                            color: "#000",
-                            fontSize: "2em",
-                            fontFamily: "Assistant",
+                            backgroundColor: "#e6e7f0",
                           }}
-                          className="hebrew-text"
                         >
-                          {payment.name}
-                        </span>
-                        <span
-                          style={{
-                            textAlign: "right",
-                            color: "#626262",
-                            fontSize: "2em",
-                            fontFamily: "Assistant",
-                            float: "left"
-                          }}
-                          className="hebrew-text"
-                        >
-                          ₪{payment.amount_donated}
-                        </span>
-                        <hr style={{ width: "100%" }}></hr>
-                        <br />
-                        <span
-                          style={{
-                            color: "#000",
-                            fontSize: "1.5em",
-                            fontFamily: "Assistant",
-                          }}
-                          className="hebrew-text"
-                        >
-                          {payment.comments}
-                        </span>
-                        <br />
-                        <br />
-                      </div>
-                    </Item>
-                  ))}
+                          <span
+                            style={{
+                              textAlign: "right",
+                              color: "#000",
+                              fontSize: "2em",
+                              fontFamily: "Assistant",
+                            }}
+                            className="hebrew-text"
+                          >
+                            {payment.name}
+                          </span>
+                          <span
+                            style={{
+                              textAlign: "right",
+                              color: "#626262",
+                              fontSize: "2em",
+                              fontFamily: "Assistant",
+                              float: "left"
+                            }}
+                            className="hebrew-text"
+                          >
+                            ₪{payment.amount_donated}
+                          </span>
+                          <hr style={{ width: "100%" }}></hr>
+                          <br />
+                          <span
+                            style={{
+                              color: "#000",
+                              fontSize: "1.5em",
+                              fontFamily: "Assistant",
+                            }}
+                            className="hebrew-text"
+                          >
+                            {payment.comments}
+                          </span>
+                          <br />
+                          <br />
+                        </div>
+                      </Item>
+                    ))}
                 </Box>
               </div>
             );

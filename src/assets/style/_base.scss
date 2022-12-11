@@ -43,3 +43,9 @@ $secondary-font: 'Rubik';
 .h1 {
     font-family: $primary-font;
 }
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+}

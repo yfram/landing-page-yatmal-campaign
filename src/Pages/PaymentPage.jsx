@@ -1,7 +1,6 @@
 import { DonationOptions } from '../Elements/DonationOptions.jsx';
-import { Box, Button, Grid, Paper, TextField } from "@mui/material";
+import { Box, Checkbox, FormControlLabel, Grid, Paper, TextField } from "@mui/material";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import '../assets/style/style.scss';
 import RequiredField from "../Components/RequiredField";
 import RtlMui from "../Components/RtlMui";
@@ -13,17 +12,27 @@ const PaymentPage = () => {
     document.dir = "rtl";
     let [email, setEmail] = useState();
     let [chosenId, setChosenId] = useState();
+    let [hok, setHok] = useState(false);
     const buttonFunction = (id) => { return id === chosenId; };
     return (
         <div>
             <Paper elevation={3}>
-                <div className="separator high" style={{ display: 'table' }}>
-                    <h1 className="title big main-color" style={{
-                        display: 'table-cell',
-                        verticalAlign: 'middle'
-                    }}>דף תרומה</h1>
+                <div className="app-bar">
+
+                    <div className="flex-box" style={{ marginRight: "12.5%" }}>
+                        <h1 style={{ color: '#d58f28' }} className="title big hebrew-text">דף תשלום מאובטח</h1>
+                    </div>
+                    <img
+                        style={{
+                            height: "100px",
+                            float: "left",
+                            marginLeft: "2%"
+                        }}
+                        src={require("./../assets/images/logo-main.png")}
+                        alt="TOM logo"
+                    />
                 </div>
-            </Paper>
+            </Paper >
             <center>
                 <RtlMui>
                     <Box
@@ -62,7 +71,6 @@ const PaymentPage = () => {
                     }}>
                         <DonationOptions buttonFunction={buttonFunction} setChosenId={setChosenId} />
                     </Box>
-                    
                 </RtlMui>
             </center>
         </div >
