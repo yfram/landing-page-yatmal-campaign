@@ -1,6 +1,6 @@
 
 const validateEmail = (email) => {
-    if (email === undefined) return true;
+    if (email === undefined || email === "") return true;
     return String(email)
         .toLowerCase()
         .match(

@@ -5,7 +5,8 @@ import '../assets/style/style.scss';
 
 export function DonationOptions({
     buttonFunction,
-    setChosenId
+    setChosenId,
+    setOtherSum
 }) {
     return <>
         <OptionButton id='120' enabled={buttonFunction} onClick={() => {
@@ -29,6 +30,9 @@ export function DonationOptions({
                 <TextField
                     onClick={() => {
                         setChosenId('other');
+                    }}
+                    onChange={(e) => {
+                        setOtherSum(e.target.value);
                     }}
                     inputProps={{
                         min: 0,
