@@ -61,7 +61,7 @@ const PaymentPage = () => {
                 email: email,
                 phone: phone,
                 sum: chosenId == 'other' ? otherSum : chosenId,
-                pageCode: hok ? "68808ecf2682" : "37e7c2911559",
+                pageCode: hok ? "bab4ef22513d" : "86610ee12a4e",
                 description: "test",
                 t: 14
             })
@@ -86,7 +86,7 @@ const PaymentPage = () => {
                 email: email,
                 phone: phone,
                 sum: chosenId == 'other' ? otherSum : chosenId,
-                pageCode: "2a58a814ea4b",
+                pageCode: "b149a926d84b",
                 description: "test",
                 t: 14
             })
@@ -103,8 +103,7 @@ const PaymentPage = () => {
         <>
             <Paper elevation={3}>
                 <div className="app-bar">
-
-                    <div className="flex-box" style={{ marginRight: "12.5%" }}>
+                    <div className="flex-box" style={{ textAlign: "center" }}>
                         <h1 style={{ color: '#d58f28' }} className="title big hebrew-text">דף תשלום מאובטח</h1>
                     </div>
                     <img
@@ -195,26 +194,35 @@ const PaymentPage = () => {
                                 marginBottom: "5%",
                                 fontWeight: "bold",
                                 fontFamily: "Assistant",
-                                float: "left",
-                                marginLeft: "30%",
+                                float: mobileCheck() ? "unset" : "left",
+                                marginLeft: mobileCheck() ? "0%" : "30%",
                             }}
-                        >המשך לתשלום</Button>
-                        <Button variant="contained" style={{
-                            backgroundColor: "blue",
-                            color: "white",
-                            width: "10%",
-                            minWidth: "200px",
-                            minHeight: "100px",
-                            fontSize: "1.5em",
-                            borderRadius: "10px",
-                            marginBottom: "10%",
-                            fontWeight: "bold",
-                            fontFamily: "Assistant",
-                            float: "left",
-                            marginLeft: "7%",
-                            onClick: { sendToPaymentBit }
-                        }}>
-                            לתשלום בביט
+                        >לתשלום באשראי</Button>
+                        <Button variant="contained"
+                            onClick={sendToPaymentBit}
+                            style={{
+                                background: "linear-gradient(#2b5586, #3ebec0)",
+                                color: "white",
+                                width: "10%",
+                                minWidth: "200px",
+                                minHeight: "100px",
+                                fontSize: "1.5em",
+                                borderRadius: "10px",
+                                marginBottom: "10%",
+                                fontWeight: "bold",
+                                fontFamily: "Assistant",
+                                float: mobileCheck() ? "unset" : "left",
+                                marginLeft: mobileCheck() ? "0%" : "7%"
+                            }}>
+                            <img
+                                style={{
+                                    height: "50px",
+                                    float: "left",
+                                    marginLeft: "2%"
+                                }}
+                                src={require("./../assets/images/bit.png")}
+                                alt="לתרומה בביט"
+                            />
                         </Button>
                     </Box>
                 </RtlMui>
