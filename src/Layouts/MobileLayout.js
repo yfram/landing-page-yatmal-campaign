@@ -6,11 +6,13 @@ import ImageSlideshow from "../Elements/ImageSlideshow";
 import getTotalAmountDonated from "../Helpers/getTotalAmountDonated";
 import DonateButton from "../Components/DonateButton";
 import "./../assets/style/style.scss";
+import { useParams } from "react-router-dom";
 
 const DesktopLayout = () => {
+    let { teamId = ':0' } = useParams();
     return (
         <div className="layout">
-            <DonateButton mobileMode={true} />
+            <DonateButton mobileMode={true} teamId={teamId} />
             <AppBar />
             <ImageSlideshow
                 style={{ borderBottom: '60px solid #0c2359' }} />

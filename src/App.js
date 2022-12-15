@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import DesktopLayout from "./Layouts/DesktopLayout";
 import MobileLayout from "./Layouts/MobileLayout";
 import PaymentPage from "./Pages/PaymentPage";
@@ -8,8 +8,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path='/' element={mobileCheck() ? <MobileLayout /> : <DesktopLayout />} />
-        <Route path='/payment' element={<PaymentPage />} />
+        <Route exact path='/' element={<Navigate replace to="/0"/>} />
+        <Route path='/:teamId' element={mobileCheck() ? <MobileLayout /> : <DesktopLayout />} />
+        <Route path='/payment:teamId' element={<PaymentPage />} />
         <Route path='/takanon' element={<iframe style={{
           position: 'fixed',
           top: 0,

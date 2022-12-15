@@ -7,11 +7,13 @@ import getTotalAmountDonated from "../Helpers/getTotalAmountDonated";
 import DonateButton from '../Components/DonateButton';
 import "./../assets/style/style.scss";
 import { TextField } from "@mui/material";
+import { useParams } from 'react-router-dom';
 
 const DesktopLayout = () => {
+  let { teamId = ':0' } = useParams();
   return (
     <div className="layout">
-      <DonateButton />
+      <DonateButton teamId={teamId} />
       <AppBar />
       <div className="flex-box">
         <ImageSlideshow className="half" />

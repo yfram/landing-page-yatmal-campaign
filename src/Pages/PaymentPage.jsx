@@ -6,12 +6,13 @@ import RequiredField from "../Components/RequiredField";
 import RtlMui from "../Components/RtlMui";
 import validateEmail from "../Helpers/validateEmail";
 import mobileCheck from "../Helpers/mobileCheck";
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 
 
 const PaymentPage = () => {
     document.dir = "rtl";
+    let { teamId = 0 } = useParams();
     let [rules, setRules] = useState(false);
     let [email, setEmail] = useState();
     let [firstName, setFirstName] = useState();
@@ -63,7 +64,7 @@ const PaymentPage = () => {
                 sum: chosenId == 'other' ? otherSum : chosenId,
                 pageCode: hok ? "bab4ef22513d" : "86610ee12a4e",
                 description: "test",
-                t: 14
+                t: teamId.slice(1)
             })
         };
         let resp = await fetch('https://us-central1-tonal-run-357512.cloudfunctions.net/createPaymentProcess', options);
@@ -88,7 +89,7 @@ const PaymentPage = () => {
                 sum: chosenId == 'other' ? otherSum : chosenId,
                 pageCode: "b149a926d84b",
                 description: "test",
-                t: 14
+                t: teamId.slice(1)
             })
         };
         let resp = await fetch('https://us-central1-tonal-run-357512.cloudfunctions.net/createPaymentProcess', options);
