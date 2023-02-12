@@ -3,7 +3,7 @@ import { Async } from "react-async";
 import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
-import getPayments from "../Helpers/getPayments";
+import { getPayments, getAmbassadorTable } from "../Helpers/getPayments";
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -14,6 +14,8 @@ const Item = styled(Paper)(({ theme }) => ({
   borderRadius: "20px",
 }));
 
+const ambassadorTable = getAmbassadorTable()
+
 const DonatorsGrid = () => {
   return (
     <Container>
@@ -21,10 +23,11 @@ const DonatorsGrid = () => {
         {({ data, error, isLoading }) => {
           if (isLoading) return "Loading...";
           if (error) return `Something went wrong: ${error.message}`;
-          if (data)
+          if (data) {
+            console.log(ambassadorTable);
             return (
               <div>
-                <h1 style={{ textAlign: "right", direction: "rtl" }}>{data.length}  תורמים</h1>
+                <h1 style={{ textAlign: "right", direction: "rtl" }}>{data.length}  תורמים סה"כ</h1>
                 <Box sx={{
                   display: 'grid',
                   gridTemplateColumns: 'repeat(2, 1fr)',
@@ -84,7 +87,7 @@ const DonatorsGrid = () => {
                 </Box>
               </div>
             );
-          return null;
+          }
         }}
       </Async>
     </Container>

@@ -1,0 +1,42 @@
+"filename", "language", "Properties", "JavaScript", "Markdown", "CSS", "HTML", "JSON", "SVG", "JavaScript React", "SCSS", "comment", "blank", "total"
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\.env", "Properties", 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\LICENSE.md", "Markdown", 0, 0, 17, 0, 0, 0, 0, 0, 0, 0, 5, 22
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\README.md", "Markdown", 0, 0, 38, 0, 0, 0, 0, 0, 0, 0, 33, 71
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\package-lock.json", "JSON", 0, 0, 0, 0, 0, 34969, 0, 0, 0, 0, 1, 34970
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\package.json", "JSON", 0, 0, 0, 0, 0, 54, 0, 0, 0, 0, 0, 54
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\public\html\Takanon.css", "CSS", 0, 0, 0, 195, 0, 0, 0, 0, 0, 0, 45, 240
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\public\html\Takanon.html", "HTML", 0, 0, 0, 0, 49, 0, 0, 0, 0, 0, 7, 56
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\public\html\nicepage.css", "CSS", 0, 0, 0, 37967, 0, 0, 0, 0, 0, 206, 129, 38302
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\public\html\nicepage.js", "JavaScript", 0, 9, 0, 0, 0, 0, 0, 0, 0, 33, 0, 42
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\public\index.html", "HTML", 0, 0, 0, 0, 20, 0, 0, 0, 0, 23, 3, 46
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\public\manifest.json", "JSON", 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 0, 13
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\App.css", "CSS", 0, 0, 0, 33, 0, 0, 0, 0, 0, 0, 6, 39
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\App.js", "JavaScript", 0, 26, 0, 0, 0, 0, 0, 0, 0, 0, 3, 29
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\App.test.js", "JavaScript", 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 2, 9
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\Components\DonateButton.js", "JavaScript", 0, 11, 0, 0, 0, 0, 0, 0, 0, 0, 1, 12
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\Components\MiddleBar.js", "JavaScript", 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 4, 35
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\Components\OptionButton.jsx", "JavaScript React", 0, 0, 0, 0, 0, 0, 0, 29, 0, 0, 2, 31
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\Components\RequiredField.jsx", "JavaScript React", 0, 0, 0, 0, 0, 0, 0, 40, 0, 1, 4, 45
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\Components\RtlMui.jsx", "JavaScript React", 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 4, 24
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\Elements\AppBar.js", "JavaScript", 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 4, 39
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\Elements\DonationOptions.jsx", "JavaScript React", 0, 0, 0, 0, 0, 0, 0, 53, 0, 0, 2, 55
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\Elements\DonatorsGrid.js", "JavaScript", 0, 89, 0, 0, 0, 0, 0, 0, 0, 0, 6, 95
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\Elements\ImageSlideshow.js", "JavaScript", 0, 30, 0, 0, 0, 0, 0, 0, 0, 0, 4, 34
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\Helpers\getPayments.js", "JavaScript", 0, 20, 0, 0, 0, 0, 0, 0, 0, 1, 3, 24
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\Helpers\getTotalAmountDonated.js", "JavaScript", 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 1, 10
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\Helpers\mobileCheck.js", "JavaScript", 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 2, 7
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\Helpers\validateEmail.js", "JavaScript", 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 2, 11
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\Layouts\DesktopLayout.js", "JavaScript", 0, 121, 0, 0, 0, 0, 0, 0, 0, 0, 3, 124
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\Layouts\MobileLayout.js", "JavaScript", 0, 119, 0, 0, 0, 0, 0, 0, 0, 0, 4, 123
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\Pages\PaymentPage.jsx", "JavaScript React", 0, 0, 0, 0, 0, 0, 0, 226, 0, 0, 9, 235
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\assets\images\arrow.svg", "SVG", 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\assets\style\_base.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 31, 10, 10, 51
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\assets\style\_components.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 52, 7, 6, 65
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\assets\style\_layout.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 29, 7, 3, 39
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\assets\style\style.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 3
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\index.css", "CSS", 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 2, 14
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\index.js", "JavaScript", 0, 12, 0, 0, 0, 0, 0, 0, 0, 3, 3, 18
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\logo.svg", "SVG", 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\reportWebVitals.js", "JavaScript", 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 2, 14
+"c:\Users\Yoni\OneDrive\Documents\React\building-yeshiva\src\setupTests.js", "JavaScript", 0, 1, 0, 0, 0, 0, 0, 0, 0, 4, 1, 6
+"Total", "-", 1, 546, 55, 38207, 69, 35036, 2, 368, 115, 295, 316, 75010

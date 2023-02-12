@@ -12,7 +12,8 @@ import { Link, useParams } from 'react-router-dom';
 
 const PaymentPage = () => {
     document.dir = "rtl";
-    let { teamId = 0 } = useParams();
+    const urlParams = new URLSearchParams(window.location.search);
+    const teamId = urlParams.has('t') ? urlParams.get('t') : '0';
     let [rules, setRules] = useState(false);
     let [email, setEmail] = useState();
     let [firstName, setFirstName] = useState();
@@ -64,7 +65,7 @@ const PaymentPage = () => {
                 sum: chosenId == 'other' ? otherSum : chosenId,
                 pageCode: hok ? "bab4ef22513d" : "86610ee12a4e",
                 description: "test",
-                t: teamId.slice(1)
+                t: teamId
             })
         };
         let resp = await fetch('https://us-central1-tonal-run-357512.cloudfunctions.net/createPaymentProcess', options);
@@ -89,7 +90,7 @@ const PaymentPage = () => {
                 sum: chosenId == 'other' ? otherSum : chosenId,
                 pageCode: "b149a926d84b",
                 description: "test",
-                t: teamId.slice(1)
+                t: teamId
             })
         };
         let resp = await fetch('https://us-central1-tonal-run-357512.cloudfunctions.net/createPaymentProcess', options);

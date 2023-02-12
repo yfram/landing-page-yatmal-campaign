@@ -2,7 +2,13 @@
     "configurations": [
         {
             "type": "chrome",
-            "name": "http://localhost:3000",
+            "name": "t=0",
+            "request": "launch",
+            "url": "http://localhost:3000/?t=0"
+        },
+        {
+            "type": "chrome",
+            "name": "base",
             "request": "launch",
             "url": "http://localhost:3000"
         }

@@ -9,7 +9,8 @@ import "./../assets/style/style.scss";
 import { useParams } from "react-router-dom";
 
 const DesktopLayout = () => {
-    let { teamId = ':0' } = useParams();
+    const urlParams = new URLSearchParams(window.location.search);
+    const teamId = urlParams.has('t') ? urlParams.get('t') : '0';
     return (
         <div className="layout">
             <DonateButton mobileMode={true} teamId={teamId} />
@@ -65,7 +66,7 @@ const DesktopLayout = () => {
                     if (error) return `Something went wrong: ${error.message}`;
                     if (data) {
 
-                        let percentage = (data / (7000000 / 100)).toFixed(2);
+                        let percentage = (data / (1000000 / 100)).toFixed(2);
                         let mask = `linear-gradient(to top, rgba(0, 0, 0, 1) ${percentage}%, rgba(0, 0, 0, 0.5) ${percentage}%)`;
                         return (
                             <div style={{ display: "flex", textAlign: "center" }}>\
@@ -107,7 +108,7 @@ const DesktopLayout = () => {
                                 }}>
                                     יעד הקמפיין:
                                     <br />
-                                    <span style={{ fontSize: "2rem" }}>₪7,000,000</span>                                </h1>
+                                    <span style={{ fontSize: "2rem" }}>₪1,000,000</span>                                </h1>
                             </div>
                         );
                     }

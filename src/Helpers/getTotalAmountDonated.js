@@ -1,4 +1,4 @@
-import getPayments from "./getPayments";
+import { getPayments } from "./getPayments";
 
 export default async function getTotalAmountDonated() {
     const payments = await getPayments();
