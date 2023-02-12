@@ -105,9 +105,6 @@ const PaymentPage = () => {
         <>
             <Paper elevation={3}>
                 <div className="app-bar">
-                    <div className="flex-box" style={{ textAlign: "center" }}>
-                        <h1 style={{ color: '#d58f28' }} className="title big hebrew-text">דף תשלום מאובטח</h1>
-                    </div>
                     <img
                         style={{
                             height: "100px",
@@ -116,6 +113,18 @@ const PaymentPage = () => {
                         }}
                         src={require("./../assets/images/logo-main.png")}
                         alt="TOM logo"
+                    />
+                    <div className="flex-box" style={{ textAlign: "center" }}>
+                        <h1 style={{ color: '#d58f28' }} className="title big hebrew-text">דף תשלום מאובטח</h1>
+                    </div>
+                    <img
+                        style={{
+                            height: "80px",
+                            float: "right",
+                            marginRight: "2%"
+                        }}
+                        src={require("../assets/images/meshulam.png")}
+                        alt="meshulam logo"
                     />
                 </div>
             </Paper >
@@ -140,7 +149,6 @@ const PaymentPage = () => {
                             }}
                             text="טלפון" />
                         <TextField
-
                             error={!validateEmail(email)}
                             onChange={
                                 (e) => {
