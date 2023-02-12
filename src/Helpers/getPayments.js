@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app"
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import { getFirestore, collection, getDocs, where } from 'firebase/firestore';
 
 const firebaseConfig = {
     apiKey: "AIzaSyBCgvd8Ee5dwxyAhnGOp8AAFIblh-MXmy0",
@@ -14,18 +14,18 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// Get a list of cities from your database
-export async function getPayments() {
-    const citiesCol = collection(db, 'payments');
-    const citySnapshot = await getDocs(citiesCol);
-    const cityList = citySnapshot.docs.map(doc => doc.data());
-    return cityList;
+export async function getAmbassadorTable() {
+    const querySnapshot = await getDocs(collection(db, 'ambassador'));
+    return querySnapshot.docs.map(doc => doc.data());
 }
 
-export async function getAmbassadorTable()
-{
-    const citiesCol = collection(db, 'ambassador');
-    const citySnapshot = await getDocs(citiesCol);
-    const cityList = citySnapshot.docs.map(doc => doc.data());
-    return cityList;
+export async function getPaymentsWhere(id) {
+    return await getPayments().then((data) => {
+        return data.filter((item) => id == 0 || item.embassador === id)
+    });
+}
+
+export async function getPayments() {
+    const querySnapshot = await getDocs(collection(db, 'payments'));
+    return querySnapshot.docs.map(doc => doc.data());
 }

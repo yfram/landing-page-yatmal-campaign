@@ -112,7 +112,7 @@ const DesktopLayout = () => {
         }}
       </Async >
       <div style={{ width: "100%", margin: "20px auto" }}>
-        <DonatorsGrid />
+        <DonatorsGrid ambassador={teamId} />
       </div>
       <h1 style={{ textAlign: "center", color: "black", fontSize: "30px", direction: "rtl" }}>
         ליצירת קשר:

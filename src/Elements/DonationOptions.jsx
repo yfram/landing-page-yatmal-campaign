@@ -28,6 +28,9 @@ export function DonationOptions({
             id='other'
             content={
                 <TextField
+                    sx={{
+                        width: '90%',
+                    }}
                     onClick={() => {
                         setChosenId('other');
                     }}
@@ -47,6 +50,15 @@ export function DonationOptions({
                         }
                     }}
                     label="סכום אחר"
+                    InputLabelProps={{
+                        style: {
+                            textAlign: 'center',
+                            fontFamily: 'Assistant',
+                            fontWeight: 'bold',
+                            left: '50%',
+                        }
+                    }
+                    }
                     variant="standard" />
             }
             enabled={buttonFunction} />

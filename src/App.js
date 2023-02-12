@@ -9,7 +9,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={mobileCheck() ? <MobileLayout /> : <DesktopLayout />} />
+        <Route path='/?t=:id' element={mobileCheck() ? <MobileLayout /> : <DesktopLayout />} />
         <Route path='/payment' element={<PaymentPage />} />
+        <Route path='/payment/?t=:id' element={<PaymentPage />} />
         <Route path='/takanon' element={<iframe style={{
           position: 'fixed',
           top: 0,
