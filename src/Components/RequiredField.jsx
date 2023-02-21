@@ -2,7 +2,7 @@ import { TextField } from "@mui/material";
 import React from "react";
 import { useState } from "react";
 
-function RequiredField({ text, errorCheck, altHelperText, ref, onChange }) {
+function RequiredField({ text, errorCheck, altHelperText, onChange }) {
   let [curText, setCurText] = useState();
   let helperText = altHelperText || "נדרשים מינימום שני אותיות";
   if (curText === undefined) {
@@ -18,7 +18,6 @@ function RequiredField({ text, errorCheck, altHelperText, ref, onChange }) {
   }
   return (
     <TextField id="outlined-basic"
-      inputRef={ref}
       onChange={
         (e) => {
           setCurText(e.target.value);
